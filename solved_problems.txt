@@ -1,0 +1,9 @@
+这是我在debug时写的记录，没什么作用
+重建数据库：
+sqlite3.OperationalError) no such column: books.retail_price
+[SQL: SELECT books.isbn AS books_isbn, books.title AS books_title, books.publisher AS books_publisher, books.author AS books_author, books.retail_price AS books_retail_price, books.stock AS books_stock 
+FROM books 
+WHERE books.isbn = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('9787111633333', 1, 0)]
+

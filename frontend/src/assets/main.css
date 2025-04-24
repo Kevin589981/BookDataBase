@@ -1,0 +1,58 @@
+@import './base.css';
+
+/* 添加全局滚动条处理 */
+html {
+  overflow-y: scroll; /*强制始终显示滚动条，防止布局偏移*/
+}
+
+body {
+  width: 100vw; /* 使用视窗宽度 */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 防止水平滚动条 */
+}
+
+#app {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+    min-height: 100vh; /* 确保body至少占据整个视口高度 */
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 100%; 
+    padding: 0rem;
+    width: 100%;
+    max-width: 1920px;
+  }
+  
+  .content-container {
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+
+}

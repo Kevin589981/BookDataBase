@@ -1,0 +1,24 @@
+{   
+    "accessible": true,
+    "default_return":true,
+    "datas":[
+        {
+            "default_super_username":"admin",
+            "default_employee_id":"CS123456",
+            "default_true_name":"Kevin",
+            "default_gender":"male",
+            "default_age":20,
+            "default_super_password":"admin",
+            "default_isSuperAdmin":true
+        },
+        {
+            "default_super_username":"admin2",
+            "default_employee_id":"CS123457",
+            "default_true_name":"Kevin2",
+            "default_gender":"male",
+            "default_age":20,
+            "default_super_password":"admin2",
+            "default_isSuperAdmin":true
+        }
+    ]
+}
