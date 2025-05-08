@@ -25,3 +25,4 @@ if __name__ == "__main__":
     uvicorn.run(app, host=localhost, port=8000)
 
     #uvicorn server.main:app --reload
+    #需要激活虚拟环境
