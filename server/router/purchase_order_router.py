@@ -19,7 +19,7 @@ def create_purchase_order(
     purchase_data: PurchaseCreateRequest,
     db: Session = Depends(get_db),
     current_user: db_models.User = Depends(auth.Auth.get_current_user)
-):
+)->PurchaseOrderResponse:
     # 验证ISBN格式
     if len(purchase_data.isbn) != 13 or not purchase_data.isbn.isdigit():
         raise HTTPException(
@@ -207,7 +207,7 @@ def pay_purchase_order(
     order_id: int,
     db: Session = Depends(get_db),
     current_user: db_models.User = Depends(auth.Auth.get_current_user)
-):
+)-> PaymentResponse:
     # 获取订单
     order = db.query(db_models.PurchaseOrder).filter(order_id==db_models.PurchaseOrder.id).first()
     if not order:
@@ -257,7 +257,7 @@ def return_purchase_order(
     order_id: int,
     db: Session = Depends(get_db),
     current_user: db_models.User = Depends(auth.Auth.get_current_user)
-):
+)-> ReturnResponse:
     # 获取订单
     order = db.query(db_models.PurchaseOrder).get(order_id)
     if not order:
@@ -290,7 +290,7 @@ def arrive_purchase_order(
     retail_price:Optional[float]=Query(None, description="零售价"),
     db: Session = Depends(get_db),
     current_user: db_models.User = Depends(auth.Auth.get_current_user)
-):
+)-> PaymentResponse:
     # 获取订单
     order = db.query(db_models.PurchaseOrder).get(order_id)
     if not order:
