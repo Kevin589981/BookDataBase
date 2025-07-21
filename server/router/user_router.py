@@ -286,7 +286,6 @@ async def get_all_users(
         ) for user in users]
     )
 
-#TODO：修改当前用户信息
 @router.patch("/me", response_model=UserResponse)
 async def update_current_user(
     update_data: UserUpdateRequest,

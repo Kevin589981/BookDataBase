@@ -11,6 +11,7 @@ export default defineConfig({
     	vueDevTools(),
     ],
   	server: {
+		host: '0.0.0.0',
 		hmr: true,
 		proxy: {
 			// 配置代理，将/api开头的请求转发到后端服务器
@@ -19,7 +20,8 @@ export default defineConfig({
 				changeOrigin: true,
 				rewrite: (path) => path.replace(/^\/api/, ''),
 			},
-		}
+		},
+		https: false,
   	},
   	resolve: {
     	alias: {
