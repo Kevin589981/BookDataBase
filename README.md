@@ -71,8 +71,8 @@ npm run dev
 ### 后端
 ```bash
 pip install -r requirements.txt
-python server/api.py
+uvicorn server.main:app --reload
 ```
 
 ## API接口文档
-(与原README中描述的API接口保持一致)
+查看localhost:<端口号>/docs
