@@ -28,4 +28,9 @@ export default defineConfig({
     	'@': fileURLToPath(new URL('./src', import.meta.url))
     	},
   	},
+	  build: {
+		outDir: 'dist', // 输出目录
+		assetsDir: 'assets', // 静态资源目录
+	  },
+	  base: './', // 设置为相对路径，确保在Electron中正确加载
 })

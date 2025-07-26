@@ -1,0 +1,30 @@
+appId: com.Kevin.BookDataBaseManager
+productName: BookDataBaseManager
+directories:
+  output: build-output
+files:
+  - dist/**/*
+  - package.json
+  - main.js
+  - "!node_modules"
+  - "!src"
+  - "!public"
+  - "!*.md"
+extraResources:
+  - from: dist
+    to: dist
+win:
+  target: 
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+  icon: public/booklogo.png
+  artifactName: "${productName}-${version}-${arch}.${ext}"
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+portable:
+  artifactName: "${productName}-${version}-portable.${ext}"

@@ -10,6 +10,9 @@ env/
 # 构建输出
 dist/
 build/
+build-output/
+dist-electron/
+electron/
 *.pyc
 *.pyo
 *.pyd
@@ -61,3 +64,4 @@ htmlcov/
 debug.json
 debug.txt
 READMEuseless.md
+
