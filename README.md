@@ -1,5 +1,5 @@
 # 图书管理系统 (Vue版)
-![License]([https://img.shields.io/badge/License-MIT-blue.svg](https://img.shields.io/badge/License-Apache%202.0-blue.svg))
+![License]([https://img.shields.io/badge/License-Apache%202.0-blue.svg])
 
 If you have a windows machine, you can just run the file `run.bat` after installing the dependencies.
 
